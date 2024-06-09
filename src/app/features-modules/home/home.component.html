@@ -1,0 +1,49 @@
+<!-- <button class="btn btn-primary" (click)="navigateToNotification()">Notification</button>
+<button class="btn btn-primary" (click)="navigateToSimulator()">Simulator</button>
+<button class="btn btn-primary" (click)="navigateToStatistics()">Statistiques</button>
+ 
+ -->
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BankingApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="navigateToSimulator()">Simulateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToTransaction()">Transaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToStatistics()">Statistiques</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToClaim()">Réclamation</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Crédit</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Nombre de crédits : </h6>
+      {{creditList.length}} crédit (s)
+      <br>
+
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Demandes</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Nombre de demande non approuvée : </h6>
+      {{NotApprouvedRequestList.length}} demande (s)
+      <br>
+      <br>
+      <h6 class="card-subtitle mb-2 text-muted">Nombre de demande approuvée :</h6>
+      {{approuvedRequestList.length}} demande (s)
+
+    </div>
+  </div>

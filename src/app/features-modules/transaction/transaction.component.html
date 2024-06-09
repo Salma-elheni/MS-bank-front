@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron">
+        <h2 class="txt-align">Transactions</h2>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-6">
+    <label for="typename">account</label>
+    <select class="form-control" [(ngModel)]="selectedAccount" name="typename" id="typename"
+            (ngModelChange)="getTransactionByAccount()">
+      <option *ngFor="let account of accounts" [ngValue]="account">{{account.id}}</option>
+    </select>
+
+
+    <div class="d-flex flex-row justify-content-center">
+      <div class="col-11" style="height: 70vh" #div>
+        <chart [type]="type" [data]="chartData" [options]="options"></chart>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="col-md-6">
+    <div class="row">
+    <div class="col-md-6">
+      <label for="Filter">Filter type</label>
+      <select class="form-control" [(ngModel)]="selectedFilter" name="Filter" id="Filter"
+              (ngModelChange)="getTransactionByFilter()">
+        <option selected ngValue="day">day</option>
+        <option ngValue="month">month</option>
+        <option ngValue="year">year</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="date">Date</label>
+      <input class="form-control" id="date" type="date" [(ngModel)]="dateFilter" (ngModelChange)="getTransactionByFilter()">
+    </div>
+
+    </div>
+
+
+    <div class="d-flex flex-row justify-content-center">
+      <div class="col-11" style="height: 70vh" #div>
+        <chart [type]="type2" [data]="chartData2" [options]="options2"></chart>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

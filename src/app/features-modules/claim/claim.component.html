@@ -1,0 +1,36 @@
+<div class="card">
+    <h4 class="card-header">Deposer une réclamation</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="statut">Statut</label>
+                <input type="text" formControlName="statut" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.statut.errors }" />
+                <div *ngIf="submitted && f.statut.errors" class="invalid-feedback">
+                    <div *ngIf="f.statut.errors.required">Statut is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <input type="text" formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type.errors }" />
+                <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+                    <div *ngIf="f.type.errors.required">Type is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="object">Objet</label>
+                <input type="text" formControlName="object" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.object.errors }" />
+                <div *ngIf="submitted && f.object.errors" class="invalid-feedback">
+                    <div *ngIf="f.object.errors.required">Objec is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Enregistrer
+                </button>
+                <a routerLink="../login" class="btn btn-link">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

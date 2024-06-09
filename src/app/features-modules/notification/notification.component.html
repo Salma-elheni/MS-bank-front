@@ -1,0 +1,20 @@
+<div [ngSwitch]="notification == null" >
+
+  <div *ngSwitchCase="true" style="font-size: 20px;">
+
+      <span>No Notification Available</span>
+
+   
+  </div>
+  <div *ngSwitchCase="false" style="font-size: 4em;">
+    <h1>
+
+      <span style="color: green;">You have a new notification</span> <br>
+
+    </h1>
+    <h3>
+      <span style="color: black;">{{notification.content}}</span>
+    </h3>
+  </div>
+
+</div>

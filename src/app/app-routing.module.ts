@@ -10,6 +10,7 @@ import { StatisticsComponent } from './features-modules/statistics/statistics.co
 import { TransactionComponent } from './features-modules/transaction/transaction.component';
 import { RegisterComponent } from './features-modules/register/register.component';
 import { ClaimComponent } from './features-modules/claim/claim.component';
+import { PersonalComponentComponent } from './features-modules/personal-component/personal-component.component';
 
 const routes: Routes = [
   { path: 'notification', component: NotificationComponent,    /* canActivate: [AuthGuardService] */  },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'claim', component: ClaimComponent,    /* canActivate: [AuthGuardService] */  },
 
   { path: 'register', component: RegisterComponent},
+  { path: 'personal', component: PersonalComponentComponent},
 
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },

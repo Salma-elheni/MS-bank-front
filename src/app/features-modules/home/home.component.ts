@@ -34,6 +34,9 @@ export class HomeComponent implements OnInit {
   navigateToClaim(){
     this.router.navigateByUrl('claim');
   }
+  navigateToPersonal(){
+    this.router.navigateByUrl('personal');
+  }
   navigateToTransaction(){
     this.router.navigateByUrl('transaction');
   }

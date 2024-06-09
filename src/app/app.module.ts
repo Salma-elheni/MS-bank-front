@@ -18,6 +18,7 @@ import { TransactionComponent } from './features-modules/transaction/transaction
 import { ChartModule } from 'angular2-chartjs';
 import { RegisterComponent } from './features-modules/register/register.component';
 import { ClaimComponent } from './features-modules/claim/claim.component';
+import { PersonalComponentComponent } from './features-modules/personal-component/personal-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ClaimComponent } from './features-modules/claim/claim.component';
     HomeComponent,
     TransactionComponent,
     RegisterComponent,
-    ClaimComponent
+    ClaimComponent,
+    PersonalComponentComponent
   ],
   imports: [
     BrowserModule,

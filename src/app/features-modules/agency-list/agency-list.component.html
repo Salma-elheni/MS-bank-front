@@ -1,0 +1,7 @@
+<h2>Agencies</h2>
+<ul>
+  <li *ngFor="let agency of agencies">
+    {{ agency.nomAgence }} - {{ agency.adrAgence }}
+    <button (click)="deleteAgency(agency.id)">Delete</button>
+  </li>
+</ul>

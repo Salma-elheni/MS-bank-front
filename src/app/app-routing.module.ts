@@ -11,6 +11,7 @@ import { TransactionComponent } from './features-modules/transaction/transaction
 import { RegisterComponent } from './features-modules/register/register.component';
 import { ClaimComponent } from './features-modules/claim/claim.component';
 import { PersonalComponentComponent } from './features-modules/personal-component/personal-component.component';
+import { AgencyListComponent } from './features-modules/agency-list/agency-list.component';
 
 const routes: Routes = [
   { path: 'notification', component: NotificationComponent,    /* canActivate: [AuthGuardService] */  },
@@ -23,6 +24,8 @@ const routes: Routes = [
 
   { path: 'register', component: RegisterComponent},
   { path: 'personal', component: PersonalComponentComponent},
+  { path: 'agency', component: AgencyListComponent},
+
 
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },

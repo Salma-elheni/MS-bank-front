@@ -1,7 +1,21 @@
 <h2>Agencies</h2>
-<ul>
-  <li *ngFor="let agency of agencies">
-    {{ agency.nomAgence }} - {{ agency.adrAgence }}
-    <button (click)="deleteAgency(agency.id)">Delete</button>
-  </li>
-</ul>
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let agency of agencies">
+    <td>{{ agency.id }}</td>
+    <td>{{ agency.nomAgence }}</td>
+    <td>{{ agency.adrAgence }}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteAgency(agency.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

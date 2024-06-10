@@ -37,6 +37,10 @@ export class HomeComponent implements OnInit {
   navigateToPersonal(){
     this.router.navigateByUrl('personal');
   }
+  navigateToAgency(){
+    this.router.navigateByUrl('agency');
+  }
+
   navigateToTransaction(){
     this.router.navigateByUrl('transaction');
   }

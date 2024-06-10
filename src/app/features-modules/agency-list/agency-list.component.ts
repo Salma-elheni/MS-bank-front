@@ -30,4 +30,10 @@ export class AgencyListComponent implements OnInit {
         this.loadAgencies();
       });
   }
+  updateAgency(agency: Agency): void {
+    this.agencyService.updateAgency(agency.id, agency)
+      .subscribe(updatedAgency => {
+        this.loadAgencies();
+      });
+  }
 }
